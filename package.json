@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Sistema de control de stock, ventas y presupuestos para CELLFIX",
   "main": "server/index.js",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
     "start": "node server/index.js",
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
