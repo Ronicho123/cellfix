@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: cellfix
+    runtime: node
+    plan: free
+    buildCommand: npm install && cd client && npm install && npm run build && cd ..
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: TAX_RATE
+        value: "0.21"
+      - key: DB_PATH
+        value: ./server/database/cellfix.db
